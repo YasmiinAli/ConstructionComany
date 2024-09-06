@@ -13,6 +13,12 @@ body {
 img {
     width: 100%;
 }
+p {
+    color: gray;
+}
+a {
+    text-decoration: none;
+}
 .container {
     width: 80%;
     margin: 0 auto;  
@@ -173,13 +179,55 @@ font-size: 18px;
     height: 70vh;
 }
 .bgimg {
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.bgimg p {
+    color: white;
+}
+.globe {
+    color: black;
+}
+.contenglobe {
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-
 }
-
-
+.globe h3 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.globe h1 {
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+.globecards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 20px;
+}
+.globecard {
+    padding:50px;
+    border: 1px solid rgb(197, 197, 197);
+    margin: 50px 0px;
+}
+.directionbtn a  {
+text-transform: uppercase;
+color: black;
+}
+.globecard h4 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.directionbtn {
+    margin-top: 40px;
+}
+.globe .btn {
+    text-transform: uppercase;
+    text-align: center;
+}
 
 
 
@@ -195,7 +243,7 @@ font-size: 18px;
         .firstbtn {
             margin-bottom: 10px;
         }
-    .cards {
+    .cards ,.contenglobe,.globecards {
         grid-template-columns: repeat(1,1fr);
         row-gap: 20px;
     }    
@@ -205,8 +253,12 @@ font-size: 18px;
 }
 
 @media screen and (min-width:600px) and (max-width:1000px){
-        .cards {
+        .cards ,.globecards{
         grid-template-columns: repeat(2,1fr);
         row-gap: 20px;
         }
+    .cards ,.contenglobe {
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 20px;
+    }           
 }
